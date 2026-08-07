@@ -2,85 +2,157 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>uteralab — サポート</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>うてら uteralab — サポート</title>
+<meta name="description" content="うてら(uteralab)のiOSアプリ サポートページ。お問い合わせ先とプライバシーポリシーはこちらから。">
 <style>
-  :root{
-    --ink:#23303B;
-    --ink-soft:#5C6874;
-    --paper:#F5F6F3;
-    --card:#FFFFFF;
-    --line:#DFE3DC;
-    --moss:#6F8C6B;
-    --serif:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;
-    --sans:"Hiragino Sans","Noto Sans JP","Yu Gothic",YuGothic,system-ui,sans-serif;
+  :root {
+    --ink: #0b0b0d;
+    --gold: #c9a45c;
+    --gold-dim: #8a7345;
+    --paper: #e8e2d6;
+    --paper-dim: #a89f8d;
   }
-  @media (prefers-color-scheme:dark){
-    :root{--ink:#E7EAE5;--ink-soft:#A2ACA5;--paper:#1B211E;--card:#232A26;--line:#333B36;--moss:#9BB795;}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+    line-height: 1.9;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
   }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;padding:0;background:var(--paper);color:var(--ink);
-    font-family:var(--sans);line-height:1.9;
-    -webkit-text-size-adjust:100%;
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 72px 24px 96px;
   }
-  .wrap{max-width:640px;margin:0 auto;padding:56px 22px 80px;}
-  header{margin-bottom:52px;}
-  .mark{width:26px;height:26px;display:block;margin-bottom:20px;opacity:.85;}
-  h1{
-    font-family:var(--serif);font-weight:600;
-    font-size:26px;letter-spacing:.08em;margin:0 0 10px;
+  header { text-align: center; margin-bottom: 8px; }
+  .brand {
+    font-size: 32px;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    margin-bottom: 6px;
   }
-  .tagline{color:var(--ink-soft);font-size:14px;margin:0;letter-spacing:.04em;}
-  h2{
-    font-family:var(--serif);font-size:17px;font-weight:600;
-    letter-spacing:.06em;margin:0 0 18px;
-    padding-bottom:10px;border-bottom:1px solid var(--line);
+  .brand-en {
+    font-size: 11px;
+    letter-spacing: 0.5em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
   }
-  section{margin-bottom:44px;}
-  .app{
-    background:var(--card);border:1px solid var(--line);
-    border-radius:10px;padding:20px 22px;margin-bottom:14px;
+  .tagline {
+    text-align: center;
+    color: var(--paper-dim);
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    margin-top: 20px;
   }
-  .app h3{font-size:16px;margin:0 0 6px;font-weight:600;letter-spacing:.04em;}
-  .app p{margin:0 0 12px;font-size:14px;color:var(--ink-soft);}
-  .app a{font-size:13px;}
-  a{color:var(--moss);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;}
-  a:hover{opacity:.7;}
-  a:focus-visible{outline:2px solid var(--moss);outline-offset:3px;border-radius:2px;}
-  .mail{
-    font-family:var(--serif);font-size:19px;letter-spacing:.03em;
-    display:inline-block;margin:4px 0 14px;
+  .leaf-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 44px 0;
   }
-  .note{font-size:13px;color:var(--ink-soft);margin:0;}
-  ul{padding-left:1.2em;margin:0 0 14px;font-size:14px;color:var(--ink-soft);}
-  li{margin-bottom:6px;}
-  footer{
-    margin-top:64px;padding-top:22px;border-top:1px solid var(--line);
-    font-size:12px;color:var(--ink-soft);letter-spacing:.04em;
+  .leaf-divider::before,
+  .leaf-divider::after {
+    content: "";
+    height: 1px;
+    width: 120px;
+    background: linear-gradient(to var(--dir, right), transparent, var(--gold-dim));
   }
+  .leaf-divider::before { --dir: right; }
+  .leaf-divider::after { --dir: left; }
+  .leaf-divider svg { flex-shrink: 0; }
+  section { margin-top: 48px; }
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+  }
+  p { margin-bottom: 14px; }
+  ul { margin: 0 0 14px 0; padding-left: 1.2em; list-style: none; }
+  li { margin-bottom: 6px; position: relative; color: var(--paper-dim); font-size: 15px; }
+  li::before {
+    content: "";
+    position: absolute;
+    left: -1.1em;
+    top: 0.85em;
+    width: 5px;
+    height: 1px;
+    background: var(--gold-dim);
+  }
+  .mailto { font-size: 18px; letter-spacing: 0.04em; }
+  .app {
+    border: 1px solid var(--gold-dim);
+    border-radius: 4px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+  }
+  .app-title {
+    font-size: 18px;
+    color: var(--paper);
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  .app-sub {
+    font-size: 13px;
+    color: var(--paper-dim);
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+  }
+  .app-desc {
+    font-size: 14px;
+    color: var(--paper-dim);
+    margin-bottom: 14px;
+  }
+  .app-links { font-size: 13px; letter-spacing: 0.06em; }
+  .en {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--paper-dim);
+    font-size: 15px;
+  }
+  .en h2 { color: var(--gold-dim); }
+  footer {
+    margin-top: 88px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--paper-dim);
+    letter-spacing: 0.08em;
+  }
+  footer .mark { color: var(--gold-dim); letter-spacing: 0.35em; }
+  a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); }
+  a:hover { border-bottom-color: var(--gold); }
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <header>
-    <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-      <ellipse cx="20" cy="26" rx="9" ry="7.5" fill="currentColor"/>
-      <ellipse cx="8.5" cy="16" rx="4" ry="5" fill="currentColor"/>
-      <ellipse cx="16" cy="10" rx="4" ry="5.2" fill="currentColor"/>
-      <ellipse cx="24.5" cy="10" rx="4" ry="5.2" fill="currentColor"/>
-      <ellipse cx="32" cy="16" rx="4" ry="5" fill="currentColor"/>
-    </svg>
-    <h1>uteralab</h1>
-    <p class="tagline">iOSアプリのサポートページ</p>
+    <div class="brand">うてら</div>
+    <div class="brand-en">uteralab</div>
   </header>
+
+  <div class="tagline">日々の中の小さな時間を、大切に。</div>
+
+  <div class="leaf-divider" aria-hidden="true">
+    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 22 C8 12, 14 6, 22 4 C18 14, 12 19, 4 22 Z" stroke="#c9a45c" stroke-width="1.2" fill="none"/>
+      <path d="M6 20 C11 15, 15 11, 20 6" stroke="#c9a45c" stroke-width="0.8"/>
+    </svg>
+  </div>
+
+  <section>
+    <p>うてら(uteralab)は、個人の開発者が制作・運営している小さなiOSアプリのブランドです。機能を足しつづけるのではなく、必要なものだけを丁寧に作ることを大切にしています。</p>
+  </section>
 
   <section>
     <h2>お問い合わせ</h2>
-    <p class="note">ご質問・不具合のご報告は、下記のアドレスまでお送りください。</p>
-    <a class="mail" href="mailto:uteralab.app@gmail.com">uteralab.app@gmail.com</a>
-    <p class="note">お返事までに数日いただく場合があります。ご報告の際は、以下をお知らせいただけると解決が早くなります。</p>
+    <p>ご質問・不具合のご報告は、下記のアドレスまでお送りください。</p>
+    <p class="mailto"><a href="mailto:uteralab.app@gmail.com">uteralab.app@gmail.com</a></p>
+    <p>お返事までに数日いただく場合があります。ご報告の際は、以下をお知らせいただけると解決が早くなります。</p>
     <ul>
       <li>アプリの名前</li>
       <li>お使いの iPhone の機種と iOS のバージョン</li>
@@ -92,20 +164,39 @@
     <h2>アプリ</h2>
 
     <div class="app">
-      <h3>今日のうちのこ</h3>
-      <p>うちのこ専用の写真アルバム。撮った写真はこの端末の中だけに保存されます。</p>
-      <a href="uchinoko-privacy.html">プライバシーポリシー</a>
+      <div class="app-title">SportTimer 声で数えるインターバルタイマー</div>
+      <div class="app-sub">画面を見ずに、声がカウントする</div>
+      <div class="app-desc">声が数えるインターバルタイマー。画面を見ずに、音声のカウントだけで進められます。広告なし・データ収集なし・買い切り。</div>
+      <div class="app-links">
+        <a href="./privacy.html">プライバシーポリシー</a>
+      </div>
     </div>
 
     <div class="app">
-      <h3>スポーツタイマー</h3>
-      <p>練習と休憩を計るためのシンプルなタイマー。</p>
-      <a href="privacy.html">プライバシーポリシー</a>
+      <div class="app-title">今日のうちのこ</div>
+      <div class="app-sub">うちのこ専用の写真アルバム</div>
+      <div class="app-desc">撮った写真はこの端末の中だけに保存されます。</div>
+      <div class="app-links">
+        <a href="./uchinoko-privacy.html">プライバシーポリシー</a>
+      </div>
     </div>
   </section>
 
+  <div class="leaf-divider" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 22 C8 12, 14 6, 22 4 C18 14, 12 19, 4 22 Z" stroke="#8a7345" stroke-width="1.2" fill="none"/>
+    </svg>
+  </div>
+
+  <section class="en" lang="en">
+    <h2>Support (English)</h2>
+    <p>uteralab is a small iOS app brand built and maintained by an individual developer. For questions, bug reports, or feature requests regarding any of our apps, please contact us at <a href="mailto:uteralab.app@gmail.com">uteralab.app@gmail.com</a>.</p>
+    <p>Including the app name, your iPhone model and iOS version, and what you were doing when the problem occurred helps us respond more quickly.</p>
+  </section>
+
   <footer>
-    © 2026 uteralab
+    <div class="mark">うてら</div>
+    <div>&copy; 2026 uteralab</div>
   </footer>
 
 </div>
