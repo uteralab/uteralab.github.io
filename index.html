@@ -72,6 +72,14 @@
     letter-spacing: 0.1em;
     margin-bottom: 16px;
   }
+  h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--paper);
+    letter-spacing: 0.08em;
+    margin: 28px 0 10px;
+  }
+  h3:first-child { margin-top: 0; }
   p { margin-bottom: 14px; }
   ul { margin: 0 0 14px 0; padding-left: 1.2em; list-style: none; }
   li { margin-bottom: 6px; position: relative; color: var(--paper-dim); font-size: 15px; }
@@ -109,6 +117,20 @@
     margin-bottom: 14px;
   }
   .app-links { font-size: 13px; letter-spacing: 0.06em; }
+  .app-links a + a { margin-left: 16px; }
+  .guide {
+    border: 1px solid var(--gold-dim);
+    border-radius: 4px;
+    padding: 22px 24px;
+  }
+  .path {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    margin: 12px 0 14px;
+    padding-left: 14px;
+    border-left: 2px solid var(--gold-dim);
+  }
   .en {
     font-family: Georgia, "Times New Roman", serif;
     color: var(--paper-dim);
@@ -164,11 +186,22 @@
     <h2>アプリ</h2>
 
     <div class="app">
+      <div class="app-title">Mimitune 英語リスニング・聞き取り特訓</div>
+      <div class="app-sub">ネイティブの崩れた音が聞き取れる</div>
+      <div class="app-desc">ネイティブが実際に出している「崩れた音」をカタカナで見える化し、音より先に光るカナで耳を慣らします。広告なし・データ収集なし・買い切り。</div>
+      <div class="app-links">
+        <a href="./mimitune-privacy.html">プライバシーポリシー</a>
+        <a href="./mimitune-tokushoho.html">特定商取引法に基づく表記</a>
+      </div>
+    </div>
+
+    <div class="app">
       <div class="app-title">SportTimer 声で数えるインターバルタイマー</div>
       <div class="app-sub">画面を見ずに、声がカウントする</div>
       <div class="app-desc">声が数えるインターバルタイマー。画面を見ずに、音声のカウントだけで進められます。広告なし・データ収集なし・買い切り。</div>
       <div class="app-links">
         <a href="./privacy.html">プライバシーポリシー</a>
+        <a href="./sporttimer-tokushoho.html">特定商取引法に基づく表記</a>
       </div>
     </div>
 
@@ -179,6 +212,28 @@
       <div class="app-links">
         <a href="./uchinoko-privacy.html">プライバシーポリシー</a>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mimitune の使い方</h2>
+
+    <div class="guide">
+      <h3>音質を最大にする(推奨)</h3>
+      <p>Mimitune のカタカナ表記は、Appleの<strong>拡張(Enhanced)品質の音声</strong>を基準に作られています。標準の音声のままでも動作しますが、拡張音声を入れると聞こえ方が大きく変わります。無料で、一度入れるだけです。</p>
+      <div class="path">設定 → アクセシビリティ → リーダーと読み上げ → 読み上げコンテンツ → 声 → 英語 → Evan(または Samantha) → 「拡張」を選択</div>
+      <p>Leo の声が Evan、Narumi の声が Samantha です。両方を入れてください。再生画面の下に「Enhanced声 未検出」と表示されている場合は、まだ拡張音声が入っていません。</p>
+
+      <h3>4つの聴き方</h3>
+      <ul>
+        <li>再生 — 今の位置からチャプターの最後まで通しで聴く</li>
+        <li>ネイティブ — 同じセリフをネイティブ速度で繰り返す</li>
+        <li>スロー — つながりを保ったまま、追える速さに落として繰り返す</li>
+        <li>区切スロー — 音のかたまりごとに区切って、どこで切れているかを見る</li>
+      </ul>
+
+      <h3>購入を復元する</h3>
+      <p>機種変更やアプリの再インストール後は、アプリ内の設定(歯車アイコン)から「購入を復元」をお選びください。購入時と同じ Apple ID でサインインしている必要があります。</p>
     </div>
   </section>
 
